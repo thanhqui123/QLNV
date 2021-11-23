@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-6 mx-auto">
+        <h1>Quản Lý nhân sự</h1>
+        <form id="formNV">
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">Mã Nhân Viên : </label>
+              <input type="text" id="txtMaNV" />
+              <div id="divMaErr"></div>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">Tên Nhân Viên : </label>
+              <input type="text" id="txtTenNV" />
+              <div id="divTenErr"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">Ngày Sinh : </label>
+              <input type="date" class="form-control" id="txtNgaySinh" />
+              <div id="divNgaySinhErr"></div>
+            </div>
+          </div>
+
+          <div class="form-group text-center">
+            <button type="submit" id="btnAdd" class="btn btn-success">
+              Thêm Sinh Viên
+            </button>
+            <button style="display: none" type="button" id="btnUpdate">Cập nhật</button>
+            <button type="button" id="btnReset">Reset Form</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-8 mx-auto">
+        <div>
+          <input
+            id="txtSearch"
+            type="text"
+            class="form-control"
+            placeholder="Nhập tên cần tìm"
+          />
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Mã Sinh Viên</th>
+              <th>Tên Sinh Viên</th>
+              <th>Ngày Sinh</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbodyNhanVien"></tbody>
+        </table>
+        <div class="container ">
+            <div id="pagination-wrapper"></div>
+        </div>
+
+        </div>
+        
+    </div>
+
+    
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="pagination.js"></script>
+    <script src="nhanvien.js"></script>
+    <script src="danhsachnhanvien.js"></script>
+
+    <script src="validation.js"></script>
+
+    <script src="main.js"></script>
+    <script src="phantrang.js"></script>
+
+  </body>
+</html>
